@@ -27,9 +27,8 @@ const Wrapper = styled.span`
   text-align: left;
 `
 
-export default function TextChanger({play}) {
+export default function TextChanger({play, items}) {
   const [count, setCount] = useState(0);
-  const items = ['Founder', 'CTO', 'Innovator'];
   const [item, setItem] = useState(items[0]);
 
   useInterval(

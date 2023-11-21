@@ -10,7 +10,6 @@ const MotionBox = styled(motion.div)`
     margin: auto;
 `
 
-
 const RowContainer = styled.div`
     position: relative;
     display: flex;

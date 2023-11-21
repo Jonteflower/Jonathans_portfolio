@@ -8,12 +8,13 @@ const ColumnContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     min-height: 431px;
     height: auto;
     gap:15px;
-    width: 100%;
+    width: fit-content;
+
     @media screen and (max-width:1200px) {
         align-items: flex-start;
     }
@@ -30,7 +31,7 @@ const ColumnContainer = styled.div`
 
 const StyledArticle = styled.article`
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     @media screen and (max-width:1100px) {
       width:95%;
       text-align: center;
@@ -58,7 +59,7 @@ const BoxTitle = styled.h2`
 const BoxText = styled.p`
     font-size: 1.1rem;
     width: 500px;
-    line-height: 1.4rem;
+    line-height: 140%;
     color:rgb(138, 147, 155);
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -109,6 +110,7 @@ function TextSection() {
                         src={personImage}
                         layout='fill'
                         alt="silhouette of a person"
+                        priority
                     />
                 </ImageContainer>
             </motion.div>
@@ -121,8 +123,14 @@ function TextSection() {
                     <BoxTitle>Full Stack Developer</BoxTitle>
                     <BoxText>
                         {`
-                Hello! I'm Jonathan, a passionate full-stack developer with a knack for solving complex problems using innovative software solutions. With extensive experience in both web and mobile platforms, I have successfully built, deployed, and managed multiple full-stack projects.
-              `}
+                            Hello, and thanks for stopping by!
+                        `}
+                        <br/>
+                        {`
+                            Building software is something I've done for a long time and is a big passion of mine. 
+                            \n
+                            Here are some of the tools I usually employ for building my tech companies.
+                        `}
                     </BoxText>
                 </StyledArticle>
             </motion.div>

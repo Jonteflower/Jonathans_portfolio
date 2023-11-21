@@ -53,7 +53,7 @@ const TextBox = styled(motion.h3)`
 `;
 
 
-function TextAnimation({ line1, line2, }) {
+function TextAnimation({ line1, line2, items }) {
     const sentance = {
         hidden: { opacity: 1 },
         visable: {
@@ -106,7 +106,7 @@ function TextAnimation({ line1, line2, }) {
 
                 >
                     <Delayed>
-                        <SmallText><TextChanger play={true}> </TextChanger></SmallText>
+                        <SmallText><TextChanger items={items} play={true}> </TextChanger></SmallText>
                         
                     </Delayed>
                 </motion.div>

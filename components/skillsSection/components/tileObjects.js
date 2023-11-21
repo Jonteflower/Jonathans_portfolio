@@ -14,7 +14,6 @@ export const frontEndObjects = [
         alt: 'javascript logo',
         title: 'js'
     },
-
 ]
 
 export const PlatformObjects = [
@@ -38,7 +37,6 @@ export const PlatformObjects = [
         alt: 'Git',
         title: 'git'
     },
-
 ]
 
 export const BackendObjects = [
@@ -57,7 +55,6 @@ export const BackendObjects = [
         alt: 'javascript logo',
         title: 'Ts'
     },
-
 ]
 
 
@@ -72,7 +69,6 @@ export const pyramidTwo = [
         alt: 'css Logo',
         title: 'css'
     },
-
 ]
 
 export const pyramidOne =

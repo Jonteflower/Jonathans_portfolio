@@ -42,7 +42,7 @@ const SlideContainer = styled.div`
 `
 
 
-function ImageSlider({ setIndex }) {
+function ImageSlider({ slides, setIndex }) {
     return (
 
         <SwiperContainer>
@@ -82,38 +82,32 @@ function ImageSlider({ setIndex }) {
                 //loopFillGroupWithBlank={true}
                 onSlideChange={(swiper) => setIndex(swiper.realIndex)}
             >
-                <SwiperSlide>
-                    <SlideContainer>
-                        <ImageContainer>
-                            <Image
-                                src="/images/websites/tixyLanding.webp"
-                                fill
-                                style={{ objectFit: "contain" }}
-                                alt='Image of my previous startup Tixy-NFT'
-                            />
-                        </ImageContainer>
-                    </SlideContainer>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <SlideContainer>
-                        <ImageContainer>
-                            <Image
-                                src="/images/websites/algoflow.webp"
-                                fill
-                                style={{ objectFit: "contain" }}
-                                alt={'Picture of Tixy Logistics webapp'}
-                            />
-                        </ImageContainer>
-                    </SlideContainer>
-                </SwiperSlide>
-                <SwiperSlide>
-                        <LazyVideo />
-                </SwiperSlide>
+                {
+                    slides.map((slide) => {
+
+                        return (<SwiperSlide>
+                            <SlideContainer>
+                                <ImageContainer>
+                                    {
+                                        slide.content == 'image' ?
+                                            <Image
+                                                src={slide.image}
+                                                fill
+                                                style={{ objectFit: "contain" }}
+                                                alt='Image of my previous startup Tixy-NFT'
+                                            />
+                                            :
+                                            <LazyVideo url={slide.image}/>
+                                    }
+                                </ImageContainer>
+                            </SlideContainer>
+                        </SwiperSlide>
+                        )
+                    })
+                }
+
             </Swiper>
         </SwiperContainer>
-
-
-
     )
 }
 

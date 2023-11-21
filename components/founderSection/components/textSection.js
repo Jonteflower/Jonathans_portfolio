@@ -1,7 +1,8 @@
-import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
-import ReadMore from './readMore'
+import ReadMore from '../../utils/readMore'
+import { FiExternalLink } from "react-icons/fi";
+
 
 const ColumnContainer = styled.div`
     display: flex;
@@ -10,8 +11,7 @@ const ColumnContainer = styled.div`
     justify-content: flex-start;
     height: fit-content;
     width: 100%;
-   height: 200px;
-   margin-top: 20px;
+    margin-top: -20px;
    @media screen and (max-width:1100px) {
         height: 100%;
     }
@@ -19,6 +19,15 @@ const ColumnContainer = styled.div`
         margin-top:0;
     }
 `
+
+const RowWrap = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+`
+
 
 const StyledArticle = styled.article`
     width: 70%;
@@ -73,8 +82,10 @@ function TextSection({ textObject }) {
             <StyledArticle>
                 {
                     textObject.title != '' ?
-
-                        <a href={textObject.link}><SlideTitle>{textObject.title}</SlideTitle></a>
+                        <RowWrap>
+                            <a href={textObject.link}><SlideTitle>{textObject.title} </SlideTitle> </a>
+                            <FiExternalLink size={22} color='#f1f1f199'/>
+                        </RowWrap>
                         :
                         <SlideTitle>{textObject.title}</SlideTitle>
                 }

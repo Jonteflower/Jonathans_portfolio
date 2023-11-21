@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import SkillsContainer from './components/projectsContainer';
+import SectionTitle from '../utils/sectionTitle';
+
 
 const OuterDiv = styled.section`
   display: flex;
@@ -80,7 +82,7 @@ function ExperienceSection({ scrollRef }) {
 
   return (
     <OuterDiv ref={scrollRef}>
-      <Title >Experiences</Title>
+      <SectionTitle text={'Experiences'} />
       <SkillsContainer></SkillsContainer>
     </OuterDiv>
   )

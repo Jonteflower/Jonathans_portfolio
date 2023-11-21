@@ -45,13 +45,11 @@ const ImageContainer = styled.div`
   position: relative;
   width: 100%;
   margin-bottom: 8px;
-  height:55%;
+  height:50%;
   @media (max-width: 400px)  {
     margin-top: 3px;
     }
 `
-
-
 
 function PyramidTile({ item }) {
 

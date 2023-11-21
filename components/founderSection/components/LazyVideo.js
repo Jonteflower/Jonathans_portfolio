@@ -13,7 +13,7 @@ const VideoContainer = styled.div`
     }
 `
 
-export default function LazyVideo() {
+export default function LazyVideo({url}) {
     const containerRef = useRef();
     const [videoLoaded, setVideoLoaded] = useState(false);
 
@@ -38,7 +38,7 @@ export default function LazyVideo() {
                     style={{ width: '100%', height: '100%' }}
                     alt='Video of the Tixy-NFT Flutter app'
                 >
-                    <source src='./images/websites/tixyCropped.mp4' />
+                    <source src={url} />
                 </video>
             )}
         </VideoContainer>

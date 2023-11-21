@@ -6,24 +6,12 @@ import styled from 'styled-components';
 import { animationItemsList } from './components/animationObjects';
 import SkillsHexagon from './components/hexagonGrid';
 import TextSection from './components/textComponent';
+import SectionTitle from '../utils/sectionTitle';
+import { OuterDiv } from '../utils/styledComponents';
 
 const PyramidSkillsDynamic = dynamic(() => import('./components/pyramidGrid'), {
   ssr: false,
 })
-
-const OuterDiv = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  min-height:760px;
-  height: fit-content;
-  margin-bottom: 150px;
-  @media screen and (max-width:1200px) {
-       //box-sizing: border-box;
-  }
-`;
 
 const InnerContainer = styled.div`
     position: relative;
@@ -33,14 +21,13 @@ const InnerContainer = styled.div`
     justify-content: space-between;
     height: auto;
     width: 100%;
-    max-width: 1300px;
-   
+    max-width: 1200px;
+
     @media screen and (max-width:1100px) {
       flex-direction: column;
       justify-content: center;
       gap: 0px;
   } 
-   
 `
 
 const AnimationContainer = styled.div`
@@ -50,68 +37,7 @@ const AnimationContainer = styled.div`
       width: 100%;
       padding-top: 30px;
   } 
-   
 `
-
-const Title = styled.h2`
-  position: relative;
-  font-size: 4.5rem;
-  font-weight: 600;
-  margin-top: 3rem;
-  margin-bottom: 8rem;
-  z-index: 1;
-  
-  &::before{
-    content: '';
-    border-bottom: 18px solid #ff4d5a;
-    width: 95%;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    left: 2.5rem;
-    top: 4.6rem;
-    z-index: -1;
-  }
-
-  @media screen and (max-width:1100px) {
-    margin-top: 3.5rem;
-    margin-bottom: 5rem;
-  } 
-
-  @media screen and (max-width:700px) {
-      font-size: 3.5rem;
-      &::before{
-    content: '';
-    border-bottom: 18px solid #ff4d5a;
-    width: 16rem;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    left:1.5rem;
-    top: 3.8rem;
-    z-index: -1;
-  }
-    }
-
-    @media screen and (max-width:600px) {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      margin-top: 1rem;
-
-      &::before{
-    content: '';
-    border-bottom: 14px solid #ff4d5a;
-    width: 11rem;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    left:1.3rem;
-    top: 2.85rem;
-    z-index: -1;
-  }
-    }
-
-`;
 
 function SkillsSection({ scrollRef, secondRef }) {
   const [ref, inView] = useInView({ threshold: 0 })
@@ -127,7 +53,6 @@ function SkillsSection({ scrollRef, secondRef }) {
         controlsHexagon.start("visible");
       }
     }
-
   }, [inView]);
 
   function shuffleArray(array) {
@@ -151,7 +76,6 @@ function SkillsSection({ scrollRef, secondRef }) {
         await delay(100)
         controlsHexagon.start("visible");
       }
-
     }
   }
 
@@ -165,8 +89,8 @@ function SkillsSection({ scrollRef, secondRef }) {
 
   return (
     <OuterDiv ref={scrollRef}>
-      <Title ref={secondRef}>Developer</Title>
-      <InnerContainer>
+      <SectionTitle text={'Developer'} />
+      <InnerContainer ref={secondRef}>
         <TextSection></TextSection>
         <AnimationContainer>
           {
