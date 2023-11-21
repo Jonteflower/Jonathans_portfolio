@@ -25,7 +25,7 @@ const logisticsObject = {
 
 const paretroObject = {
     title: 'Paretro',
-    text: `Paretro is a tech company operating operiting in AI and Industry 4.0. Paretro recently implemented its ALgoflow software in a successfull pilot project and is being used by 100s of warehouse workers every day.`,
+    text: `Paretro is a tech company operating in the AI and Industry 4.0 space. Paretro recently implemented its ALgoflow software in a successfull pilot project and is currently being used by 100s of warehouse workers daily.`,
     link: 'https://www.tixylogistics.com',
     image: '/images/websites/paretro.jpg',
     content: 'image'
@@ -34,7 +34,7 @@ const paretroObject = {
 
 const euroHackpot = {
     title: 'Euro Hackpot',
-    text: `It's a side project based on a Bayesian take on playing the Euro Jackpot lottery. Drawings based on previously drawn numbers have outperformed a fair drawing tested on a 1% significance level.`,
+    text: `A small project with a Bayesian approach to the Euro Jackpot lottery. Drawing random numbers based on prior numbers. This method have outperformed a fair drawing tested on a 1% significance level.`,
     link: 'https://www.eurohackpot.com',
     image: '/images/websites/euroHackpot.jpg',
     content: 'image'

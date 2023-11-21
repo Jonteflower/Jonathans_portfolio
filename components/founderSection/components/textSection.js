@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import ReadMore from '../../utils/readMore'
 import { FiExternalLink } from "react-icons/fi";
 
-
 const ColumnContainer = styled.div`
     display: flex;
     flex-direction: column;
