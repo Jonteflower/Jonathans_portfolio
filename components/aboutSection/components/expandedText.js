@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ReadMore from '../../founderSection/components/readMore';
+import ReadMore from '../../utils/readMore';
 
 export const TextBox = styled.span`
   color:#d4d4d4;

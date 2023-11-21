@@ -85,7 +85,8 @@ function ImageSlider({ slides, setIndex }) {
                 {
                     slides.map((slide) => {
 
-                        return (<SwiperSlide>
+                        return (
+                        <SwiperSlide key={slide.image}>
                             <SlideContainer>
                                 <ImageContainer>
                                     {
