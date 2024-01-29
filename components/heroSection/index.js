@@ -67,7 +67,7 @@ const Section = styled.section`
 
 function HeroSection({ scrollToNext, scrollRef }) {
   const [loaded, setLoaded] = useState(false)
-  const items = ['Developer', 'Founder', 'Data Scientist'];
+  const items = ['Developer', ' Founder', 'Data Nerd'];
 
   return (
     <Section ref={scrollRef}>

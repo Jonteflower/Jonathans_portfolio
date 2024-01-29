@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Footer from "./Footer/Footer1";
 import NavMenu from "./Header/NavBar";
 
-
 export default function Layout({ children }) {
   const [scroll, setScroll] = useState(0);
 

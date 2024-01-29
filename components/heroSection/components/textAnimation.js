@@ -43,15 +43,13 @@ const TextWrap = styled.div`
 
     @media screen and (max-width:600px) {
     width: 150px;
-  }
+    }
 
 `;
 
-
-const TextBox = styled(motion.h3)`
+const TextBox = styled(motion.h1)`
         
 `;
-
 
 function TextAnimation({ line1, line2, items }) {
     const sentance = {
