@@ -48,7 +48,8 @@ const TextWrap = styled.div`
 
 `;
 
-const TextBox = styled(motion.h1)`
+const TextBox = styled(motion.div)`
+    //height: 400px;
     z-index: 1;
 `;
 
