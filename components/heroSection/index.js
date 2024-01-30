@@ -82,7 +82,6 @@ function HeroSection({ scrollToNext, scrollRef }) {
           </StyledButton>
         </OuterDiv>
       }
-
     </Section>
   )
 

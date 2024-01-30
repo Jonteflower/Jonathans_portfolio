@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Delayed = ({ children, waitBeforeShow = 2500 }) => {
+const Delayed = ({ children, waitBeforeShow = 3000 }) => {
   const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {

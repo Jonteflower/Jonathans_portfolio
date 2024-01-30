@@ -3,13 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Delayed from "../../utils/delayed";
 import TextChanger from './textChanger';
-//Text Animation
 
 const LargeText = styled(motion.span)`
    color: #FFFFFF;
    font-size: 3rem;
    text-align: left;
    font-weight: 500;
+   z-index: 1;
    @media screen and (max-width:600px) {
     font-size: 2.5rem;
     line-height: 2.7rem;
@@ -25,6 +25,7 @@ const SmallText = styled(motion.span)`
    line-height: 2.25rem;
    text-align: left;
    font-weight: 500;
+   z-index: 1;
    @media screen and (max-width:600px) {
     font-size: 2rem;
     line-height: 2.2rem;
@@ -48,24 +49,24 @@ const TextWrap = styled.div`
 `;
 
 const TextBox = styled(motion.h1)`
-        
+    z-index: 1;
 `;
 
 function TextAnimation({ line1, line2, items }) {
-    const sentance = {
+    const sentence = {
         hidden: { opacity: 1 },
-        visable: {
+        visible: {
             opacity: 1,
             transition: {
                 delay: 0.5,
-                staggerChildren: 0.08
+                staggerChildren: 0.1
             }
         }
     }
 
     const letter = {
         hidden: { opacity: 0, y: 50 },
-        visable: {
+        visible: {
             opacity: 1,
             y: 0
         }
@@ -73,13 +74,13 @@ function TextAnimation({ line1, line2, items }) {
 
     return (
         <TextBox
-            variants={sentance}
+            variants={sentence}
             initial="hidden"
-            animate="visable"
+            animate="visible"
         >
             {line1.split("").map((char, index) => {
                 return (
-                    <LargeText key={char + "" + index} variants={letter}>
+                    <LargeText key={char + index} variants={letter}>
                         {char}
                     </LargeText>
                 )
@@ -89,7 +90,7 @@ function TextAnimation({ line1, line2, items }) {
                 {line2.split("").map((char, index) => {
                     return (
                         <SmallText
-                            key={char + "" + index}
+                            key={char + index}
                             variants={letter}
                         >
                             {char}
@@ -104,15 +105,14 @@ function TextAnimation({ line1, line2, items }) {
 
                 >
                     <Delayed>
-                        <SmallText><TextChanger items={items} play={true}> </TextChanger></SmallText>
-                        
+                        <SmallText>
+                            <TextChanger items={items} play={true}> </TextChanger>
+                        </SmallText>
                     </Delayed>
                 </motion.div>
-
             </TextWrap>
-
         </TextBox>
     )
 }
 
-export default TextAnimation
+export default TextAnimation;

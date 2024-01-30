@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^13.1.1",
-    "framer-motion": "^7.6.2",
+    "framer-motion": "^11.0.3",
     "next": "^13.4.2",
     "node-fetch": "^2.6.12",
     "papaparse": "^5.4.1",
