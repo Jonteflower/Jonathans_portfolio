@@ -42,7 +42,6 @@ export default function TextChanger({play, items}) {
         setCount(newCount)
         setItem(items[newCount])
       }
-
     },
     play ? 4000 : null
   )

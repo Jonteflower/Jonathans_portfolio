@@ -20,7 +20,6 @@ const logisticsObject = {
     link: 'https://www.tixylogistics.com',
     image: '/images/websites/algoFlow.jpg',
     content: 'image'
-
 }
 
 const paretroObject = {
