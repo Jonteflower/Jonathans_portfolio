@@ -17,7 +17,7 @@ const logisticsObject = {
     title: 'AlgoFlow',
     text: `AlgoFlow optimizes existing warehouse resources with data-driven decision-making AI warehouse planning and Big Data Analytics`,
     link: 'https://www.tixylogistics.com',
-    image: '/images/websites/algoFlow.jpg',
+    image: '/images/websites/algoflow.jpg',
     content: 'image'
 }
 
