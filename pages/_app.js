@@ -2,9 +2,6 @@ import Head from "next/head";
 import React, { useEffect } from 'react';
 import { LanguageContextProvider } from "../stores/languageContext";
 import '../styles/globals.scss';
-import NavMenu from "../Layout/Header/NavBar";
-import Footer from "../Layout/Footer/Footer1";
-
 
 export default function MyApp({ Component, pageProps }) {
   // Use the layout defined at the page level, if available

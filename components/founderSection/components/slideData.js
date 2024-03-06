@@ -1,4 +1,3 @@
-
 const tixyWebObject = {
     title: 'Tixy-NFT',
     text: 'Tixy-NFT is one of the fastest and most user-friendly ways of deploying, buying and selling NFTs. By leveraging custom encrypted custodian wallets together with Stripe we managed to revolutionize the way NFT transactions are made.',
@@ -30,7 +29,6 @@ const paretroObject = {
     content: 'image'
 }
 
-
 const euroHackpot = {
     title: 'Euro Hackpot',
     text: `A small project with a Bayesian approach to the Euro Jackpot lottery. Drawing random numbers based on prior numbers. This method have outperformed a fair drawing tested on a 1% significance level.`,
@@ -39,7 +37,4 @@ const euroHackpot = {
     content: 'image'
 }
 
-
-
 export const textObjects = [tixyWebObject, tixyAppObject, logisticsObject, paretroObject, euroHackpot]
-

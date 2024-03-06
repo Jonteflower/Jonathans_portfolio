@@ -15,11 +15,9 @@ const SwiperContainer = styled.div`
   width: 100%;
   min-height: 40vh; 
   height: fit-content;
-  @media (max-width: 900px)  {
-        
-    }
+  @media (max-width: 900px)  {     
+  }
 `
-
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
